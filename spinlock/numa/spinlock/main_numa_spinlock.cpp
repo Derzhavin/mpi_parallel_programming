@@ -16,6 +16,7 @@ void inc_value(MPI_Win win, int host_rank)
     ++value;
 
     MPI_Put(&value, 1, MPI_INT, host_rank, 0, 1, MPI_INT, win);
+    MPI_Win_flush(host_rank, win);
     MPI_Win_unlock(host_rank, win);
 }
 
@@ -55,7 +56,7 @@ int main(int argc, char *argv[])
     if (rank == 0)
     {
         printf("job done\n");
-        printf("count_: %d\n", value);
+        printf("value result: %d\n", value);
 
         if (value == count_to * num_workers)
         {

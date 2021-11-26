@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="remoteMemoryReader"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mpi_win_create_get">
+				<Option output="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/mpi_win_create_get" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 mpi_win_create_get"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mpi_win_create_get/fast">
+				<Option output="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/mpi_win_create_get" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 mpi_win_create_get/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mpi_win_create_put">
+				<Option output="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/mpi_win_create_put" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 mpi_win_create_put"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mpi_win_create_put/fast">
+				<Option output="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/mpi_win_create_put" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 mpi_win_create_put/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mpi_win_create_put_winlock">
+				<Option output="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/mpi_win_create_put_winlock" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 mpi_win_create_put_winlock"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mpi_win_create_put_winlock/fast">
+				<Option output="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/mpi_win_create_put_winlock" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 mpi_win_create_put_winlock/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mpi_win_create_get_winlock">
+				<Option output="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/mpi_win_create_get_winlock" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 mpi_win_create_get_winlock"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mpi_win_create_get_winlock/fast">
+				<Option output="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/mpi_win_create_get_winlock" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 mpi_win_create_get_winlock/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/main_mpi_win_create_get.cpp">
+			<Option target="mpi_win_create_get"/>
+		</Unit>
+		<Unit filename="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/main_mpi_win_create_get_winlock.cpp">
+			<Option target="mpi_win_create_get_winlock"/>
+		</Unit>
+		<Unit filename="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/main_mpi_win_create_put.cpp">
+			<Option target="mpi_win_create_put"/>
+		</Unit>
+		<Unit filename="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/main_mpi_win_create_put_winlock.cpp">
+			<Option target="mpi_win_create_put_winlock"/>
+		</Unit>
+		<Unit filename="/media/denis/Seagate/Projects/mpi_parallel_programming/remoteMemoryReader/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

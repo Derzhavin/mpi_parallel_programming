@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/mpi_win_create_get.dir/main_mpi_win_create_get.cpp.o -o mpi_win_create_get  -Wl,-rpath,/usr/local/lib /usr/local/lib/libmpi.so 

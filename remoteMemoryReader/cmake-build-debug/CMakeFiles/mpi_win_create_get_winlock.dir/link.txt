@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/mpi_win_create_get_winlock.dir/main_mpi_win_create_get_winlock.cpp.o -o mpi_win_create_get_winlock  -Wl,-rpath,/usr/local/lib /usr/local/lib/libmpi.so 

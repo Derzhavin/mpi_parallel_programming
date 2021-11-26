@@ -3,6 +3,7 @@
 //
 
 #include "AtomicFlag.h"
+#include "mpi_util/util.h"
 
 #include <cstdio>
 #include <thread>
@@ -33,31 +34,24 @@ bool numa::AtomicFlag::incrementCAS()
 
     // 3. compare and set
     unsigned long res_flag = 0;
-    MPI_Win_lock(MPI_LOCK_SHARED,_host_rank,0, _win);
-
-//    unsigned long orig_flag;
-//    MPI_Get(&orig_flag, 1, MPI_UNSIGNED_LONG, _host_rank, 0, 1, MPI_UNSIGNED_LONG, _win);
-//
-//    if (orig_flag == old_flag)
-//    {
-//        MPI_Put(&new_flag, 1, MPI_UNSIGNED_LONG, _host_rank, 0, 1, MPI_UNSIGNED_LONG, _win);
-//    }
-    MPI_Compare_and_swap(&new_flag, &old_flag, &res_flag, MPI_UNSIGNED_LONG, _host_rank, (MPI_Aint) sizeof(unsigned long), _win);
+    MPI_Win_lock(MPI_LOCK_EXCLUSIVE,_host_rank,0, _win);
+    CHECK_MPI_STATUS(MPI_Compare_and_swap(&new_flag, &old_flag, &res_flag, MPI_UNSIGNED_LONG, _host_rank, (MPI_Aint) sizeof(unsigned long), _win));
+    MPI_Win_flush(_host_rank, _win);
     MPI_Win_unlock(_host_rank, _win);
 
 #ifdef MY_ATOMIC_FLAG_DEBUG_INFO
     printf("numa::AtomicFlag::incrementCAS()/CAS/%d\n", _client_rank);
     printf("old: %lu, new: %lu, res: %lu\n", old_flag, new_flag, res_flag);
 #endif
-//    return orig_flag == old_flag;
     return res_flag == new_flag;
 }
 
 void numa::AtomicFlag::clear()
 {
     unsigned long flag = 0;
-    MPI_Win_lock(MPI_LOCK_SHARED,_host_rank,0, _win);
+    MPI_Win_lock(MPI_LOCK_EXCLUSIVE,_host_rank,0, _win);
     MPI_Put(&flag, 1, MPI_UNSIGNED_LONG, _host_rank, 0, 1, MPI_UNSIGNED_LONG, _win);
+    MPI_Win_flush(_host_rank, _win);
     MPI_Win_unlock(_host_rank,_win);
 }
 
