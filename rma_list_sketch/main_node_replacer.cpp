@@ -1,8 +1,14 @@
 #include <iostream>
 #include <mpi.h>
 
+enum State: int
+{
+    ACQUIRED = 1,
+    RELEASED = 2
+};
 struct Node
 {
+    State state;
     int val;
     MPI_Aint nextDisp;
 };
@@ -51,54 +57,42 @@ int main(int argc, char *argv[])
         MPI_Alloc_mem(sizeof(Node), MPI_INFO_NULL, &pNode);
         pNode->val = 0;
         pNode->nextDisp = (MPI_Aint)MPI_BOTTOM;
+        pNode->state = State::RELEASED;
         MPI_Win_attach(win, pNode, sizeof(Node));
         MPI_Get_address(pNode, &nodeDisp);
     }
     MPI_Bcast(&nodeDisp, 1, MPI_AINT, 0, comm);
 
-//    Node oldNode{};
-//    Node newNode{.val = rank};
-//    Node resultNode{.val = -1};
+    Node newNode{.val = rank};
 
-    int oldNode{};
-    int newNode{rank};
-    int resultNode{-1};
+    State oldState{RELEASED};
+    State newState{ACQUIRED};
+    State resultState;
 
     if (rank != 0)
     {
 
         MPI_Win_lock_all(0, win);
-//        MPI_Get(&oldNode, 1, NodeType, 0, nodeDisp, 1, NodeType, win);
-        MPI_Get(&oldNode, 1, MPI_INT, 0, nodeDisp, 1, MPI_INT, win);
+        MPI_Compare_and_swap(&newState, &oldState, &resultState, MPI_INT, 0, nodeDisp, win);
         MPI_Win_flush_all(win);
-        MPI_Win_sync(win);
-        MPI_Barrier(comm);
-//        MPI_Request  request;
-//        MPI_Rget_accumulate(&newNode, 1, MPI_INT, &resultNode, 1, MPI_INT, 0, nodeDisp, 1, MPI_INT, MPI_REPLACE, win, &request);
-//        MPI_Rget_accumulate(&newNode, 1, NodeType, &resultNode, 1, NodeType, 0, nodeDisp, 1, NodeType, MPI_REPLACE, win, &request);
-//        MPI_Compare_and_swap(&newNode, &oldNode, &resultNode, NodeType, 0, nodeDisp, win);
-        MPI_Compare_and_swap(&newNode, &oldNode, &resultNode, MPI_INT, 0, nodeDisp, win);
-        MPI_Win_flush_all(win);
-        MPI_Win_sync(win);
+
+        if (resultState == RELEASED)
+        {
+            MPI_Put(&newNode, 1, NodeType, 0, nodeDisp, 1, NodeType, win);
+            MPI_Win_flush_all(win);
+        }
         MPI_Win_unlock_all(win);
     }
-    else
-    { MPI_Barrier(comm);}
+
+    MPI_Barrier(comm);
 
     for(int i = 0; i < size; ++i)
     {
-        if (i == rank)
+        if (i == rank && i != 0)
         {
-//            std::cout << "-----------\n";
-//            std::cout << "rank: " << rank << '\n';
-//            std::cout << "oldNode - val: " << oldNode.val << " nextDisp: " << oldNode.nextDisp << '\n';
-//            std::cout << "newNode - val: " << newNode.val << " nextDisp: " << newNode.nextDisp << '\n';
-//            std::cout << "resultNode - val: " << resultNode.val << " nextDisp: " << resultNode.nextDisp << '\n';
             std::cout << "-----------\n";
             std::cout << "rank: " << rank << '\n';
-            std::cout << "oldNode - val: " << oldNode << '\n';
-            std::cout << "newNode - val: " << newNode << '\n';
-            std::cout << "resultNode - val: " << resultNode << '\n';
+            std::cout << "resultState: " << resultState << '\n';
         }
         MPI_Barrier(comm);
     }
@@ -107,6 +101,8 @@ int main(int argc, char *argv[])
     if (rank == 0)
     {
         std::cout << pNode->val << '\n';
+        std::cout << pNode->state << '\n';
+        std::cout << pNode->nextDisp << '\n';
         MPI_Win_detach(win, pNode);
         MPI_Free_mem(pNode);
     }
