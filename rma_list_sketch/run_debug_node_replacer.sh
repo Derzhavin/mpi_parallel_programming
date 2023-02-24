@@ -1,0 +1,1 @@
+mpiexec -np 6 ./cmake-build-debug/node_replacer
